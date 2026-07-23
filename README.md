@@ -1,1 +1,41 @@
-# Travel-management-using-array-list
+import java.util.*;
+
+class CityList {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+
+        ArrayList<String> cities = new ArrayList<>();
+
+        cities.add("Madurai");
+        cities.add("Chennai");
+        cities.add("Coimbatore");
+
+        System.out.print("Enter city to append: ");
+        cities.add(sc.next());
+
+        System.out.print("Enter index to insert: ");
+        int index = sc.nextInt();
+
+        System.out.print("Enter city name: ");
+        String city = sc.next();
+
+        cities.add(index, city);
+
+        System.out.print("Enter city to search: ");
+        String search = sc.next();
+
+        if (cities.contains(search))
+            System.out.println("City Found");
+        else
+            System.out.println("City Not Found");
+
+        System.out.print("Enter starting letter: ");
+        char ch = sc.next().charAt(0);
+
+        System.out.println("Cities starting with " + ch + ":");
+        for (String c : cities) {
+            if (Character.toUpperCase(c.charAt(0)) == Character.toUpperCase(ch))
+                System.out.println(c);
+        }
+    }
+}# Travel-management-using-array-list
